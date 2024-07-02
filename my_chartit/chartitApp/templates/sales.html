@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sales Dashboard</title>
+
+    <!-- jQuery CDN -->
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Highcharts CDN -->
+    <script src="https://code.highcharts.com/highcharts.src.js"></script>
+    <!-- Highcharts Accessibility Module -->
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+    <!-- CSS for styling charts -->
+    <style>
+      .chart-container {
+        width: 100%;
+        height: 400px; /* Adjust height as needed */
+        margin: 20px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Sales Dashboard</h1>
+
+    <!-- Column Chart Container -->
+    <div class="chart-container" id="columnChartContainer">
+      {% load chartit %} {{ column_chart|load_charts:"columnChartContainer" }}
+    </div>
+  </body>
+</html>
